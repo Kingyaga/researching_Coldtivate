@@ -1,0 +1,29 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { buildLocaleStaticParams, getLocaleFromParams, useTranslations } from '#i18n/utils';
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams()
+}
+
+const t = useTranslations(getLocaleFromParams(Astro.params));
+
+---
+<Layout title={t("coldRoomGlitches.title")}>
+<div class="w-full p-4">
+  <h3 class="text-xl font-bold text-black mb-4">{t("coldRoomGlitches.title")}</h3>
+  <div class="prose-slate">
+    <h3 class="text-lg font-bold text-black">{t('coldRoomGlitches.water.title')}</h3>
+    <p class="text-black">{t('coldRoomGlitches.water.details')}</p>
+    <h3 class="text-lg font-bold text-black mt-4">{t('coldRoomGlitches.condensation.title')}</h3>
+    <p class="text-black">{t('coldRoomGlitches.condensation.details')}</p>
+    <h3 class="text-lg font-bold text-black mt-4">{t('coldRoomGlitches.operators.title')}</h3>
+    <p class="text-black">{t('coldRoomGlitches.operators.details')}</p>
+    <h3 class="text-lg font-bold text-black mt-4">{t('coldRoomGlitches.compressor.title')}</h3>
+    <p class="text-black">{t('coldRoomGlitches.compressor.details')}</p>
+    <h3 class="text-lg font-bold text-black mt-4">{t('coldRoomGlitches.short.title')}</h3>
+    <p class="text-black">{t('coldRoomGlitches.short.details')}</p>
+  </div>
+</div>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { buildLocaleStaticParams, getLocaleFromParams, useTranslations } from '#i18n/utils';
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams();
+}
+
+const t = useTranslations(getLocaleFromParams(Astro.params));
+
+---
+<Layout title={t("coolingService.title")}>
+    <div class="w-full p-4">
+        <h3 class="text-xl font-bold text-black mb-4">{t("coolingService.title")}</h3>
+        <div class="prose-slate">
+            <h3 class="text-lg font-bold text-black">{t('coolingService.business.title')}</h3>
+
+            <p class="text-black">
+            {t('coolingService.business.one')}
+            <span class="font-bold">{t('coolingService.business.two')}</span>
+            {t('coolingService.business.three')}
+            </p>
+
+            <h3 class="text-lg font-bold text-black mt-8">{t('coolingService.stakeholders.title')}</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li class="text-black">
+                    <span class="font-bold">{t('coolingService.stakeholders.providers.title')}</span>
+                    {t('coolingService.stakeholders.providers.details')}
+                </li>
+                <li class="text-black">
+                    <span class="font-bold">{t('coolingService.stakeholders.users.details')}</span>
+                    {t('coolingService.stakeholders.users.details')}
+                </li>
+                <li class="text-black">
+                    <span class="font-bold">{t('coolingService.stakeholders.producer.title')}</span>
+                    {t('coolingService.stakeholders.producer.details')}
+                </li>
+            </ul>
+        </div>
+    </div>
+</Layout>

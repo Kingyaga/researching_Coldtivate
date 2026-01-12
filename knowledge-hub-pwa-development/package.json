@@ -1,0 +1,32 @@
+{
+  "name": "coldtivate-knowledge-hub",
+  "type": "module",
+  "version": "0.0.6",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/tailwind": "^5.1.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^4.16.13",
+    "embla-carousel-react": "^8.4.0",
+    "pluralize": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/pluralize": "^0.0.33",
+    "@vite-pwa/astro": "^0.4.3"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}

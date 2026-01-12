@@ -1,0 +1,166 @@
+---
+import { Image } from 'astro:assets';
+import type { GetImageResult } from 'astro';
+
+import type { TableColumnMap } from "#/types";
+import type { EthyleneLevel } from "#/constants";
+
+interface Props {
+  columns: TableColumnMap;
+  rows: Array<Record<string, string | number | GetImageResult>>;
+}
+
+const { columns, rows } = Astro.props;
+
+const columnKeys = Object.values(columns).map((column) => column.columnKey);
+
+const ETHYLENE_TEXT_COLOR_MAP: Record<EthyleneLevel, string> = {
+  'low': "text-blue-500",
+  'high': "text-orange-500",
+  'moderate': "text-yellow-500",
+  'very high': "text-red-500",
+  'very low': "text-green-500",
+  'N/A': "text-zinc-900"
+};
+
+function getTextColor (value: string | number, columnKey: string): string {
+  if (columnKey === "ethyleneProduction" || columnKey === "ethyleneSensitivity") {
+    return ETHYLENE_TEXT_COLOR_MAP[String(value).toLowerCase() as EthyleneLevel] ?? "text-zinc-900";
+  }
+  return "text-zinc-900";
+};
+---
+<script>
+  import type { EthyleneLevel } from "#/constants";
+
+  const ETHYLENE_SORT_ORDER: Record<EthyleneLevel, number> = {
+    'N/A': 0,
+    'very low': 1,
+    'low': 2,
+    'moderate': 3,
+    'high': 4,
+    'very high': 5
+  };
+
+  function handleSort (column: string): void {
+    const table = document.querySelector<HTMLTableElement>('table');
+    const tbody = table?.querySelector<HTMLTableSectionElement>('tbody');
+    const rows = tbody ? Array.from(tbody.querySelectorAll<HTMLTableRowElement>('tr')) : [];
+
+    const direction: 'asc' | 'desc' = table?.getAttribute('data-sort-direction') === 'asc' ? 'desc' : 'asc';
+    table?.setAttribute('data-sort-direction', direction);
+    table?.setAttribute('data-sort-column', column);
+
+    const sortedRows = rows.toSorted((rowA, rowB) => {
+      const cellA = rowA.querySelector<HTMLTableCellElement>(`td[data-column="${column}"]`);
+      const cellB = rowB.querySelector<HTMLTableCellElement>(`td[data-column="${column}"]`);
+
+      const valA = cellA?.getAttribute('data-value')?.toLowerCase() ?? '';
+      const valB = cellB?.getAttribute('data-value')?.toLowerCase() ?? '';
+
+      if (column === 'ethyleneProduction' || column === 'ethyleneSensitivity') {
+        const orderA = ETHYLENE_SORT_ORDER[valA as EthyleneLevel] ?? -1;
+        const orderB = ETHYLENE_SORT_ORDER[valB as EthyleneLevel] ?? -1;
+        return direction === 'asc' ? orderA - orderB : orderB - orderA;
+      }
+
+      if (!isNaN(Number(valA)) && !isNaN(Number(valB))) {
+        return direction === 'asc' ? Number(valA) - Number(valB) : Number(valB) - Number(valA);
+      }
+
+      return direction === 'asc'
+        ? valA.localeCompare(valB)
+        : valB.localeCompare(valA);
+    });
+
+    if (tbody) {
+      tbody.innerHTML = '';
+      for (let i = 0; i < sortedRows.length; i++) {
+        tbody.appendChild(sortedRows[i]);
+      }
+    }
+
+    const headers = document.querySelectorAll<HTMLTableCellElement>('th');
+    for (let i = 0; i < headers.length; i++) {
+      const th = headers[i];
+      const arrow = th.querySelector('.sort-arrow');
+      if (th.getAttribute('data-column') === column && arrow) {
+        arrow.textContent = direction === 'asc' ? '↑' : '↓';
+        arrow.classList.remove('opacity-0');
+      } else if (arrow) {
+        arrow.classList.add('opacity-0');
+      }
+    }
+  };
+
+  const headers = document.querySelectorAll<HTMLTableCellElement>('th');
+  for (let i = 0; i < headers.length; i++) {
+    const th = headers[i];
+    th.addEventListener('click', () => {
+      const column = th.getAttribute('data-column');
+      if (column) handleSort(column);
+    });
+  }
+</script>
+
+<table class="table-auto w-full border-collapse border border-zinc-300" data-sort-direction="asc">
+    <thead class="bg-[#353839] text-white sticky top-0 z-20 select-none">
+      <tr>
+        {columnKeys.map((columnKey) => {
+          const stickyStyles = columnKey === "commodityName" ? "sticky left-0 bg-[#353839] z-20" : "";
+          return (
+            <th
+              class={`px-4 py-2 border-b border-zinc-300 text-center text-sm font-normal text-white break-words ${stickyStyles} cursor-pointer hover:bg-[#454849] relative`}
+              data-column={columnKey}
+            >
+              <span>{columns[columnKey]?.label ?? ''}</span>
+              <span class="sort-arrow opacity-0 ml-1">↑</span>
+            </th>
+          );
+        })}
+      </tr>
+    </thead>
+
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          {columnKeys.map((columnKey) => {
+            const value = row[columnKey] || "";
+            const safeValue = typeof value === 'string' || typeof value === 'number' ? value : ''
+            const textStyles =  getTextColor(safeValue, columnKey);
+            const isFirstCell = columnKey === "commodityName";
+            const stickyStyles = isFirstCell ? "sticky left-0 z-10" : "";
+            const computeFn = columns[columnKey]?.computeCellValue;
+            const cellValue = typeof computeFn === "function"
+              ? computeFn(columnKey, value)
+              : safeValue;
+            return (
+              <td
+                class={`px-4 py-2 border border-zinc-300 text-sm text-center bg-white ${textStyles} ${stickyStyles}`}
+                data-column={columnKey}
+                data-value={safeValue}
+              >
+                {isFirstCell && row?.image ? (
+                  <div class="flex items-center gap-2 break-words">
+                    <!-- @ts-ignore -->
+                    <Image
+                        src={row.image.src}
+                        decoding="async"
+                        loading="lazy"
+                        width={32}
+                        height={32}
+                        alt="icon"
+                        class="object-contain"
+                    />
+                    <span>{cellValue}</span>
+                  </div>
+                ) : (
+                <span>{cellValue}</span>
+                )}
+              </td>
+            );
+          })}
+        </tr>
+      ))}
+    </tbody>
+</table>

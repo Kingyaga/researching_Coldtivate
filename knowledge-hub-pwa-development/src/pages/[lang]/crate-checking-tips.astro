@@ -1,0 +1,94 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { buildLocaleStaticParams, getLocaleFromParams, useTranslations } from '#i18n/utils';
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams();
+}
+
+const t = useTranslations(getLocaleFromParams(Astro.params));
+
+---
+<Layout title={t("crateCheckingTips.title")}>
+<div class="w-full p-4">
+  <h3 class="text-xl font-bold text-black">{t("crateCheckingTips.title")}</h3>
+  <div class="prose-slate">
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.sorting.title')}</h3>
+    <ul class="list-disc pl-6 space-y-2">
+      <li class="text-black">{t('crateCheckingTips.sorting.one')}</li>
+      <li class="text-black">{t('crateCheckingTips.sorting.two')}</li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.pre-cooling.title')}</h3>
+    <ul class="list-disc pl-6 space-y-2">
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.one')}</li>
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.two')}</li>
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.three')}</li>
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.four')}</li>
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.five')}</li>
+      <li class="text-black">{t('crateCheckingTips.pre-cooling.six')}</li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.check-in.title')}</h3>
+    <ul class="list-disc pl-6 space-y-3">
+      <li class="text-black">{t('crateCheckingTips.check-in.one')}</li>
+      <li class="text-black">{t('crateCheckingTips.check-in.two')}</li>
+      <li class="text-black">
+        {t('crateCheckingTips.check-in.three.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('crateCheckingTips.check-in.three.one')}</li>
+          <li class="text-black">{t('crateCheckingTips.check-in.three.two')}</li>
+          <li class="text-black">{t('crateCheckingTips.check-in.three.three')}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.stacking.title')}</h3>
+    <ul class="list-disc pl-6 space-y-3">
+      <li class="text-black">
+        {t('crateCheckingTips.stacking.one.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('crateCheckingTips.stacking.one.one')}</li>
+          <li class="text-black">{t('crateCheckingTips.stacking.one.two')}</li>
+          <li class="text-black">{t('crateCheckingTips.stacking.one.three')}</li>
+          <li class="text-black">{t('crateCheckingTips.stacking.one.four')}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.maintain.title')}</h3>
+    <ul class="list-disc pl-6 space-y-2">
+      <li class="text-black">{t('crateCheckingTips.maintain.one')}</li>
+      <li class="text-black">{t('crateCheckingTips.maintain.two')}</li>
+      <li class="text-black">{t('crateCheckingTips.maintain.three')}</li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.sanitation.title')}</h3>
+    <ul class="list-disc pl-6 space-y-3">
+      <li class="text-black">
+        {t('crateCheckingTips.sanitation.one.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('crateCheckingTips.sanitation.one.one')}</li>
+          <li class="text-black">{t('crateCheckingTips.sanitation.one.two')}</li>
+          <li class="text-black">{t('crateCheckingTips.sanitation.one.three')}</li>
+          <li class="text-black">{t('crateCheckingTips.sanitation.one.four')}</li>
+          <li class="text-black">{t('crateCheckingTips.sanitation.one.five')}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-black mt-6 mb-2">{t('crateCheckingTips.packaging.title')}</h3>
+    <ul class="list-disc pl-6 space-y-3">
+      <li class="text-black">
+        {t('crateCheckingTips.packaging.one.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('crateCheckingTips.packaging.one.one')}</li>
+          <li class="text-black">{t('crateCheckingTips.packaging.one.two')}</li>
+        </ul>
+      </li>
+      <li class="text-black">{t('crateCheckingTips.packaging.two')}</li>
+    </ul>
+  </div>
+</div>
+</Layout>

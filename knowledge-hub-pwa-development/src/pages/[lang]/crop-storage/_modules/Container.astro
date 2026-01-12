@@ -1,0 +1,138 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { useTranslations } from '#i18n/utils';
+import type { TableColumnMap } from "#/types"
+import type { TranslationLocales } from '#/i18n/constants';
+
+import {
+  KNOWLEDGE_HUB_LIST,
+  CROP_STORAGE_TABLE_DATUMS,
+  ETHYLENE_LEVELS,
+} from '#/constants';
+import { imageLoader, cropListTranslationUtils } from '#/shared';
+
+import Table from '../_components/Table.astro';
+
+interface Props {
+  locale: TranslationLocales
+  country?: string
+}
+
+const { locale, country } = Astro.props
+
+const t = useTranslations(locale);
+
+function _getLocalizedEthyleneLevel(level: string): string {
+  const _level = level as keyof typeof ETHYLENE_LEVELS
+  return ETHYLENE_LEVELS[_level]?.[locale] || ETHYLENE_LEVELS['N/A'][locale];
+};
+
+const columns: TableColumnMap = {
+  commodityName: { columnKey: 'commodityName', label: t("cropStorage.name") },
+  optimalTemperature: { columnKey: 'optimalTemperature', label: t("cropStorage.temperature") },
+  storageLife: { columnKey: 'storageLife', label: t("cropStorage.storage-time") },
+  ethyleneProduction: {
+    columnKey: 'ethyleneProduction',
+    label: t("cropStorage.ethylene-prod"),
+    computeCellValue: (_, datum) => _getLocalizedEthyleneLevel(datum),
+  },
+  ethyleneSensitivity: {
+    columnKey: 'ethyleneSensitivity',
+    label: t("cropStorage.ethylene-sens"),
+    computeCellValue: (_, datum) => _getLocalizedEthyleneLevel(datum),
+  },
+};
+
+const knowledgeHubMap = new Map(
+  KNOWLEDGE_HUB_LIST.map((item) => [item.commodityName, item.image])
+);
+
+const storageLifeTranslations: Record<string, string> = {
+  months: t("cropStorage.months"),
+  weeks: t("cropStorage.weeks"),
+  days: t("cropStorage.days"),
+};
+
+const cropsImagesLoader = imageLoader('crops');
+const cropUtils = cropListTranslationUtils()
+
+const promises = CROP_STORAGE_TABLE_DATUMS
+  .filter((datum) => datum.commodityName !== "Others")
+  .map(async (datum) => {
+    const fileName = knowledgeHubMap
+      .get(datum.commodityName)
+      ?.replace('crop_images/', '');
+
+    const image = await cropsImagesLoader.get(fileName ?? '');
+
+    const normalizedDatum = { ...datum, image: image ?? '' };
+
+    normalizedDatum.commodityName = cropUtils.translate(cropUtils.translationMap, {
+      name: datum.commodityName,
+      country,
+      locale
+    })
+
+    const [value, unit] = normalizedDatum.storageLife.split(" ");
+    if (unit in storageLifeTranslations) {
+      normalizedDatum.storageLife = `${value} ${storageLifeTranslations[unit]}`;
+    }
+
+    return normalizedDatum;
+  });
+
+const datums = await Promise.all(promises);
+
+const rows = datums.toSorted((a, b) =>
+  a.commodityName.localeCompare(b.commodityName, locale, {
+    sensitivity: "base",
+  })
+);
+---
+<Layout title={t("cropStorage.title")}>
+<div class="w-full p-4">
+  <h3 class="text-xl font-bold text-black">{t("cropStorage.title")}</h3>
+
+  <div class="prose-slate">
+    <p class="text-black mt-8">
+      <span class="text-red-600">{t('cropStorage.attention')}</span>
+      {t('cropStorage.combinations')}
+    </p>
+
+    <div class="mt-4 flex flex-row items-center flex-wrap gap-x-8 gap-y-0">
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <div class="w-4 h-4 bg-orange-400 rounded-full"></div>
+        <p class="text-black">{t('cropStorage.combo')} 1</p>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <p class="text-black">{t('cropStorage.combo')} 2</p>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-orange-400 rounded-full"></div>
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <p class="text-black">{t('cropStorage.combo')} 3</p>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+        <p class="text-black">{t('cropStorage.combo')} 4</p>
+      </div>
+    </div>
+
+    <p class="text-black mt-4">{t('cropStorage.identify')}</p>
+  </div>
+
+  <div class="overflow-x-auto max-h-[550px] mt-2">
+      <Table columns={columns} rows={rows} />
+  </div>
+
+  <p class="mt-4 text-gray-400 font-light text-sm">{t('cropStorage.reference')}</p>
+</div>
+</Layout>

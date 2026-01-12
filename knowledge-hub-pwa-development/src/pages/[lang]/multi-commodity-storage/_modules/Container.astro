@@ -1,0 +1,72 @@
+
+---
+import Layout from '#layouts/Layout.astro';
+
+import { usePathWithLocale, useTranslations } from '#i18n/utils';
+import type { TranslationLocales } from '#/i18n/constants';
+
+interface Props {
+  locale: TranslationLocales
+  country?: string
+}
+
+const { locale, country } = Astro.props
+
+const t = useTranslations(locale);
+const buildPath = usePathWithLocale(locale)
+
+---
+<Layout title={t("multiCommodityStorage.title")}>
+    <div class="w-full p-4">
+    <h3 class="text-xl font-bold text-black mb-4">{t("multiCommodityStorage.title")}</h3>
+    <div class="prose-slate">
+      <h3 class="text-lg text-black underline mb-2">{t('multiCommodityStorage.temp.title')}</h3>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li>{t('multiCommodityStorage.temp.one')}</li>
+        <li>
+          <span>{t('multiCommodityStorage.temp.three.title')}</span>
+          <ul class="list-disc pl-4 space-y-2">
+            <li>
+              <span class="font-semibold">{t('multiCommodityStorage.temp.three.one.bold')}</span>
+              {t('multiCommodityStorage.temp.three.one.details')}
+            </li>
+            <li>
+              <span class="font-semibold">{t('multiCommodityStorage.temp.three.two.details')}</span>
+              {t('multiCommodityStorage.temp.three.two.details')}
+            </li>
+          </ul>
+        </li>
+        <li>{t('multiCommodityStorage.temp.four')}</li>
+        <li>
+          {t('multiCommodityStorage.temp.five.one')}
+          <span class="font-semibold">{t('multiCommodityStorage.temp.five.two')}</span>
+          {t('multiCommodityStorage.temp.five.three')}
+          <span class="font-semibold">{t('multiCommodityStorage.temp.five.four')}</span>
+          {t('multiCommodityStorage.temp.five.five')}
+        </li>
+        <li>{t('multiCommodityStorage.temp.six')}</li>
+        <li>{t('multiCommodityStorage.temp.seven')}</li>
+      </ul>
+
+      <h3 class="text-lg text-black underline mt-6 mb-2">{t('multiCommodityStorage.ethylene.title')}</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>{t('multiCommodityStorage.ethylene.one')}</li>
+        <li>
+          <span class="font-semibold">{t('multiCommodityStorage.ethylene.two.bold')}</span>
+          {t('multiCommodityStorage.ethylene.two.details')}
+        </li>
+        <li>{t('multiCommodityStorage.ethylene.three')}</li>
+      </ul>
+
+      <h3 class="text-lg text-black underline mt-6 mb-2">{t('multiCommodityStorage.table.title')}</h3>
+      <h3 class="text-base text-black">
+        {t('multiCommodityStorage.table.one')}
+        <span class="text-[#07857E]">
+          <a href={buildPath("/crop-storage", country)} class="hover:underline">{t('multiCommodityStorage.table.two')}</a>
+        </span>
+        {t('multiCommodityStorage.table.three')}
+      </h3>
+    </div>
+  </div>
+</Layout>

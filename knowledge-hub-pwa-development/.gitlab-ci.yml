@@ -1,0 +1,122 @@
+stages:
+  - dependencies
+  # - validation
+  - build
+  - deploy
+
+image: node:20-alpine
+
+###
+## Template Scripts
+###
+
+.yarn-install: &yarn-install
+  - yarn config set cache-folder ~/.yarn
+  - yarn install --frozen-lockfile
+
+###
+## Caches
+###
+
+.yarn-cache: &yarn-cache
+  key: yarn-cache
+  policy: pull
+  paths:
+    - node_modules/
+    - ~/.yarn
+
+###
+## Validation
+###
+
+# lint:
+#   stage: validation
+#   before_script:
+#     - *yarn-install
+#   script:
+#     - yarn run lint
+
+###
+## Build
+###
+
+## Templates
+
+.build-webapp:
+  stage: build
+  before_script:
+    - *yarn-install
+  script:
+    - yarn run build
+  artifacts:
+    paths:
+      - dist/
+  cache:
+    - <<: *yarn-cache
+      policy: pull-push
+
+## Jobs
+
+### Staging
+
+build webapp staging:
+  extends: .build-webapp
+  variables:
+    BASE_API_URL: https://knowledge-hub-staging.coldtivate.org/
+  only:
+    - /^feat\/.*/
+    - /^hotfix\/-.*/
+    - development
+    - main
+
+### Production
+
+build webapp production:
+  extends: .build-webapp
+  variables:
+    BASE_API_URL: https://knowledge-hub.coldtivate.org/
+  when: manual
+  only:
+    - tags
+
+###
+## Deployment
+###
+
+## Templates
+
+.publish-to-cloudflare:
+  stage: deploy
+  variables:
+    PROJECT_NAME: CHANGEME
+    BRANCH: CHANGEME
+  script:
+    - npx wrangler pages deploy "./dist" --project-name="$PROJECT_NAME" --branch="$BRANCH" --commit-hash="$CI_COMMIT_SHA" --no-bundle --commit-dirty=false
+
+publish to cloudflare pages staging:
+  extends: .publish-to-cloudflare
+  needs:
+    - build webapp staging
+  variables:
+    PROJECT_NAME: coldtivate-knowledge-hub-staging
+    BRANCH: $CI_COMMIT_REF_NAME
+  environment:
+    name: staging
+    url: https://knowledge-hub-staging.coldtivate.org
+  only:
+    - main
+    - development
+
+publish to cloudflare pages production:
+  extends: .publish-to-cloudflare
+  needs:
+    - build webapp production
+  variables:
+    PROJECT_NAME: coldtivate-knowledge-hub
+    BRANCH: main
+  environment:
+    name: production
+    url: https://knowledge-hub.coldtivate.org
+  when: manual
+  only:
+    - tags

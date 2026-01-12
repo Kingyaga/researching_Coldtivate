@@ -1,0 +1,11 @@
+---
+import { buildLocaleStaticParams } from "#/i18n/utils";
+
+import Container from "../_modules/Container.astro"
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams()
+}
+
+---
+<Container locale={Astro.params.lang} />

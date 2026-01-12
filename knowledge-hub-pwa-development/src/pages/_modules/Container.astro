@@ -1,0 +1,30 @@
+---
+import Layout from "#/layouts/Layout.astro"
+import NavLink from "#components/ListItem.astro"
+
+import type { TranslationLocales } from "#/i18n/constants"
+import { useRtl, usePathWithLocale, useTranslations } from "#i18n/utils"
+
+interface Props {
+  locale: TranslationLocales
+}
+
+const { locale } = Astro.props
+
+const buildPath = usePathWithLocale(locale)
+const t = useTranslations(locale)
+const isRtl = useRtl(locale).isRtl
+
+---
+<Layout>
+    <nav class="p-0 select-none">
+        <NavLink label={t("root.comic")} link={buildPath("/farmer-journey")} isRtl={isRtl} />
+        <NavLink label={t("coolingService.title")} link={buildPath("/cooling-service")} isRtl={isRtl} />
+        <NavLink label={t("maximizeCropQuality.title")} link={buildPath("/maximize-crop-quality")} isRtl={isRtl} />
+        <NavLink label={t("multiCommodityStorage.title")} link={buildPath("/multi-commodity-storage")} isRtl={isRtl} />
+        <NavLink label={t("cropStorage.title")} link={buildPath("/crop-storage")} isRtl={isRtl} />
+        <NavLink label={t("sensorsPickupModel.title")} link={buildPath("/sensors-pickup-model")} isRtl={isRtl} />
+        <NavLink label={t("crateCheckingTips.title")} link={buildPath("/crate-checking-tips")} isRtl={isRtl} />
+        <NavLink label={t("coldRoomGlitches.title")} link={buildPath("/cold-room-glitches")} isRtl={isRtl} />
+    </nav>
+</Layout>

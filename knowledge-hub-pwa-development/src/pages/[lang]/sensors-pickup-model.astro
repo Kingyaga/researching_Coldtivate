@@ -1,0 +1,60 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { buildLocaleStaticParams, getLocaleFromParams, useTranslations } from '#i18n/utils';
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams();
+}
+
+const t = useTranslations(getLocaleFromParams(Astro.params));
+
+---
+<Layout title={t("sensorsPickupModel.title")}>
+<div class="w-full p-4">
+  <h3 class="text-xl font-bold text-black">{t("sensorsPickupModel.title")}</h3>
+  <div class="prose-slate">
+    <h3 class="text-lg underline text-black mt-6 mb-2">{t('sensorsPickupModel.temp.title')}</h3>
+    <ul class="list-disc pl-6 space-y-3">
+      <li class="text-black">
+        {t('sensorsPickupModel.temp.one.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('sensorsPickupModel.temp.one.one')}</li>
+          <li class="text-black">{t('sensorsPickupModel.temp.one.two')}</li>
+        </ul>
+      </li>
+      <li class="text-black">
+        {t('sensorsPickupModel.temp.two.title')}
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-black">{t('sensorsPickupModel.temp.two.one')}</li>
+          <li class="text-black">{t('sensorsPickupModel.temp.two.two')}</li>
+          <li class="text-black">{t('sensorsPickupModel.temp.two.three')}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="text-lg underline text-black mt-6 mb-2">{t('sensorsPickupModel.ttpu.title')}</h3>
+    <ul class="list-disc pl-6 space-y-2">
+      <li class="text-black">{t('sensorsPickupModel.ttpu.one')}</li>
+      <li class="text-black">
+        <span class="font-bold">{t('sensorsPickupModel.ttpu.two.bold')}</span>
+        {t('sensorsPickupModel.ttpu.two.details')}
+      </li>
+      <li class="text-black">{t('sensorsPickupModel.ttpu.three')}</li>
+      <li class="text-black">
+        {t('sensorsPickupModel.ttpu.four.one')}{' '}
+        <span class="font-bold">{t('sensorsPickupModel.ttpu.four.bold')}</span>
+        {t('sensorsPickupModel.ttpu.four.two')}
+      </li>
+      <li class="text-black">
+        <span class="font-bold">{t('sensorsPickupModel.ttpu.five.bold')}</span>{' '}
+        {t('sensorsPickupModel.ttpu.five.details')}
+      </li>
+      <li class="text-black">
+        <span class="font-bold">{t('sensorsPickupModel.ttpu.six.bold')}</span>
+        {t('sensorsPickupModel.ttpu.six.details')}
+      </li>
+    </ul>
+  </div>
+</div>
+</Layout>

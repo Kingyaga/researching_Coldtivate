@@ -1,0 +1,116 @@
+site_name: Coldtivate Documentation
+site_url: https://mydomain.org
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+
+nav:
+  - Introduction:
+      - index.md
+  - "Core Concepts":
+      - core-concepts/index.md
+      - Repositories:
+          - core-concepts/repositories/index.md
+          - "Mobile App Structure": core-concepts/repositories/mobile-structure.md
+          - "Backend Monorepo Structure":
+              - core-concepts/repositories/backend/index.md
+              - "BASE API": core-concepts/repositories/backend/main-api.md
+              - "Impact Dashboard": core-concepts/repositories/backend/impact-dashboard.md
+              - "Farmers Dashboard": core-concepts/repositories/backend/farmers-dashboard.md
+              - "ML4market Nigeria": core-concepts/repositories/backend/ml4market-nigeria.md
+              - "ML4market India": core-concepts/repositories/backend/ml4market-india.md
+              - "App Impact Reporting": core-concepts/repositories/backend/app-impact-reporting.md
+          - "Knowledge Hub Structure": core-concepts/repositories/pwa.md
+          - "Documentation Structure": core-concepts/repositories/docs.md
+      - "System Architecture": core-concepts/architecture.md
+      - "Container Architecture": core-concepts/container-architecture.md
+      - "Database Entities":
+          - core-concepts/database/index.md
+          - "Schema Breakdown": core-concepts/database/database-entities.md
+      - "Functional Features":
+          - core-concepts/functional-features/index.md
+          - "Integrations & Data Collection": core-concepts/functional-features/integrations-data-collection.md
+      - "Technical Features":
+          - core-concepts/technical-features/index.md
+          - "Deep Linking": core-concepts/technical-features/deep-linking.md
+          - "SWR": core-concepts/technical-features/swr.md
+          - RBAC: core-concepts/technical-features/rbac.md
+          - Internationalization: core-concepts/technical-features/internationalization.md
+          - "Mobile Geolocation": core-concepts/technical-features/geolocation.md
+      - "Scheduled Tasks": core-concepts/scheduled-jobs.md
+  - "Self-Hosting":
+      - self-hosting/index.md
+      - "Quick Start":
+          - self-hosting/quick-start/index.md
+          - "Mobile App Build Guide": self-hosting/quick-start/frontend.md
+          - "Self-Hosting & Backend Setup": self-hosting/quick-start/backend.md
+      - "CI/CD Pipeline":
+          - self-hosting/ci-pipelines/index.md
+          - "Backend Monorepo": self-hosting/ci-pipelines/backend.md
+          - "Mobile App": self-hosting/ci-pipelines/frontend.md
+          - "Knowledge Hub": self-hosting/ci-pipelines/pwa.md
+      - "Cloud Infrastructure": self-hosting/cloud-infrastructure.md
+      - "QA Automation": self-hosting/qa-strategy.md
+      - Configuration: self-hosting/config.md
+      - Licenses: self-hosting/licenses.md
+  - Contributing:
+      - contributing/index.md
+      - "Contribution Guidelines": contributing/guidelines.md
+      - "Local Development Guides":
+          - contributing/local-dev/index.md
+          - "BASE Backend APIs": contributing/local-dev/backend.md
+          - "Mobile App": contributing/local-dev/mobile.md
+          - "Knowledge Hub": contributing/local-dev/pwa.md
+          - "Branching Strategy": contributing/branching-strategy.md
+      - Testing: contributing/testing.md
+      - "Security Policy": contributing/security-disclosure.md

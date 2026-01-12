@@ -1,0 +1,21 @@
+---
+import { CROP_LIST } from '#/constants';
+import { DEFAULT_LOCALE } from '#/i18n/constants';
+import { getLocaleFromParams } from '#/i18n/utils';
+
+import Container from './_modules/Container.astro';
+
+export function getStaticPaths() {
+  const baseItem = CROP_LIST[0]
+  return Object.entries(baseItem.en)
+    .filter(([key]) => key !== 'global')
+    .map(([country]) => ({
+      params: {
+        lang: DEFAULT_LOCALE,
+        country
+      }
+    }));
+}
+
+---
+<Container locale={getLocaleFromParams(Astro.params)} country={Astro.params.country} />

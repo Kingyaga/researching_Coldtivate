@@ -1,0 +1,36 @@
+---
+import { pwaInfo } from 'virtual:pwa-info';
+
+import { getLocaleFromParams, useRtl } from '#i18n/utils';
+import { buildPageTitle } from '#/shared';
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+
+const locale = getLocaleFromParams(Astro.params)
+const htmlDirection = useRtl(locale).htmlDirection
+
+---
+<!doctype html>
+<html lang={locale} dir={htmlDirection}>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/pwa-192x192.png">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="generator" content={Astro.generator}>
+		<title>{buildPageTitle(title)}</title>
+		<script src="/src/pwa.ts"></script>
+        { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+	</head>
+	<body>
+		<main>
+		  <slot />
+		</main>
+	</body>
+</html>

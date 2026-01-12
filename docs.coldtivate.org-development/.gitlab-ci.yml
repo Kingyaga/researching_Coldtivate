@@ -1,0 +1,94 @@
+stages:
+  - build
+  - deploy
+
+###
+## Build
+###
+
+## Templates
+
+.build-docs:
+  stage: build
+  image: python:3.9-alpine
+  before_script:
+    - pip3 install --upgrade pipenv
+    - pipenv install --dev
+  script:
+    - pipenv run mkdocs build
+  artifacts:
+    paths:
+      - site/
+  cache:
+    - key: pipenv-cache
+      policy: pull-push
+      paths:
+        # Setup pipenv and python paths
+        - ~/.cache/pip
+        - ~/.local/share/pipenv
+        - ~/.local/share/virtualenv
+        - ~/.local/share/virtualenvs
+
+## Jobs
+
+### Staging
+
+build docs staging:
+  extends: .build-docs
+  only:
+    - merge_requests
+    - /^feat\/.*/
+    - /^hotfix\/-.*/
+    - development
+    - main
+
+### Production
+
+build docs production:
+  extends: .build-docs
+  when: manual
+  only:
+    - tags
+
+###
+## Deployment
+###
+
+## Templates
+
+.publish-to-cloudflare:
+  stage: deploy
+  image: node:20-alpine
+  variables:
+    PROJECT_NAME: CHANGEME
+    BRANCH: CHANGEME
+  script:
+    - npx wrangler pages deploy "./site" --project-name="$PROJECT_NAME" --branch="$BRANCH" --commit-hash="$CI_COMMIT_SHA" --no-bundle --commit-dirty=false
+
+publish to cloudflare pages staging:
+  extends: .publish-to-cloudflare
+  needs:
+    - build docs staging
+  variables:
+    PROJECT_NAME: coldtivate-docs
+    BRANCH: $CI_COMMIT_REF_NAME
+  only:
+    - merge_requests
+    - /^feat\/.*/
+    - /^hotfix\/-.*/
+    - development
+    - main
+
+publish to cloudflare pages production:
+  extends: .publish-to-cloudflare
+  needs:
+    - build docs production
+  variables:
+    PROJECT_NAME: coldtivate-docs
+    BRANCH: main
+  environment:
+    name: production
+    url: https://docs.coldtivate.org
+  when: manual
+  only:
+    - tags

@@ -1,0 +1,52 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { buildLocaleStaticParams, getLocaleFromParams, useTranslations } from '#i18n/utils';
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams();
+}
+
+const t = useTranslations(getLocaleFromParams(Astro.params));
+
+---
+<Layout title={t("maximizeCropQuality.title")}>
+    <div class="w-full p-4">
+        <h3 class="text-xl font-bold text-black mb-4">{t("maximizeCropQuality.title")}</h3>
+        <div class="prose-slate">
+            <h3 class="text-lg font-bold text-black">{t('maximizeCropQuality.intro')}</h3>
+
+            <h3 class="text-lg underline text-black mt-6 mb-2">{t('maximizeCropQuality.temp.title')}</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li class="text-black">{t('maximizeCropQuality.temp.one')}</li>
+                <li class="text-black">{t('maximizeCropQuality.temp.two')}</li>
+                <li class="text-black">{t('maximizeCropQuality.temp.three')}</li>
+                <li class="text-black">
+                    <span class="font-bold">{t('maximizeCropQuality.temp.four')}</span>
+                </li>
+                <li class="text-black">{t('maximizeCropQuality.temp.five')}</li>
+            </ul>
+
+            <h3 class="text-lg underline text-black mt-6 mb-2">{t('maximizeCropQuality.humidity.title')}</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li class="text-black">{t('maximizeCropQuality.humidity.one')}</li>
+                <li class="text-black">{t('maximizeCropQuality.humidity.two')}</li>
+            </ul>
+
+            <h3 class="text-lg underline text-black mt-6 mb-2">{t('maximizeCropQuality.ethylene.title')}</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li class="text-black">{t('maximizeCropQuality.ethylene.one')}</li>
+                <li class="text-black">{t('maximizeCropQuality.ethylene.two')}</li>
+                <li class="text-black">
+                    <span class="font-bold">{t('maximizeCropQuality.ethylene.three.bold')}</span>
+                    {t('maximizeCropQuality.ethylene.three.details')}
+                </li>
+            </ul>
+
+            <h3 class="text-lg underline text-black mt-6">{t('maximizeCropQuality.air.title')}</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li class="text-black">{t('maximizeCropQuality.air.one')}</li>
+            </ul>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from "#/layouts/Layout.astro";
+
+import {
+  buildLocaleStaticParams,
+  getLocaleFromParams,
+  usePathWithLocale,
+  useTranslations,
+  useRtl,
+} from "#/i18n/utils";
+import { imageLoader } from "#/shared";
+
+import Slider from "./_components/Slider"
+
+export function getStaticPaths() {
+  return buildLocaleStaticParams()
+}
+
+const locale = getLocaleFromParams(Astro.params)
+
+const t = useTranslations(locale)
+const buildPath = usePathWithLocale(locale)
+const isRtl = useRtl(locale).isRtl
+
+const comicStrips = await imageLoader('comics').all(locale)
+
+---
+<Layout>
+    <div class="container mx-auto px-4 py-8 h-screen">
+        <Slider
+            client:load
+            slides={comicStrips}
+            previousLabel={t("root.prev")}
+            nextLabel={t("root.next")}
+            endingTitle={t("root.endingTitle")}
+            endingMessage={t("root.endingMessage")}
+            backBashboard={t("root.backBashboard")}
+            backDashboardPath={buildPath("/")}
+            isRtl={isRtl}
+        />
+    </div>
+</Layout>

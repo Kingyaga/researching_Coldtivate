@@ -1,0 +1,1132 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* coldtivateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* coldtivateTests.m */; };
+		10D0780C2CB9FC7100F727BE /* libreact-native-config.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D0780B2CB9FC7100F727BE /* libreact-native-config.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14908BD75E8F44A696C7D890 /* employee.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA5E6F59DCC948798269F922 /* employee.svg */; };
+		1BB18B72E858487C9852222C /* check-in.svg in Resources */ = {isa = PBXBuildFile; fileRef = C5557BDE2E30475B88B30240 /* check-in.svg */; };
+		1F0362532C21D88E0085C32C /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03623F2C21D88E0085C32C /* AntDesign.ttf */; };
+		1F0362542C21D88E0085C32C /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362402C21D88E0085C32C /* Entypo.ttf */; };
+		1F0362552C21D88E0085C32C /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362412C21D88E0085C32C /* EvilIcons.ttf */; };
+		1F0362562C21D88E0085C32C /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362422C21D88E0085C32C /* Feather.ttf */; };
+		1F0362572C21D88E0085C32C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362432C21D88E0085C32C /* FontAwesome.ttf */; };
+		1F0362582C21D88E0085C32C /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362442C21D88E0085C32C /* FontAwesome5_Brands.ttf */; };
+		1F0362592C21D88E0085C32C /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362452C21D88E0085C32C /* FontAwesome5_Regular.ttf */; };
+		1F03625A2C21D88E0085C32C /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362462C21D88E0085C32C /* FontAwesome5_Solid.ttf */; };
+		1F03625B2C21D88E0085C32C /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362472C21D88E0085C32C /* FontAwesome6_Brands.ttf */; };
+		1F03625C2C21D88E0085C32C /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362482C21D88E0085C32C /* FontAwesome6_Regular.ttf */; };
+		1F03625D2C21D88E0085C32C /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362492C21D88E0085C32C /* FontAwesome6_Solid.ttf */; };
+		1F03625E2C21D88E0085C32C /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624A2C21D88E0085C32C /* Fontisto.ttf */; };
+		1F03625F2C21D88E0085C32C /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624B2C21D88E0085C32C /* Foundation.ttf */; };
+		1F0362602C21D88E0085C32C /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624C2C21D88E0085C32C /* Ionicons.ttf */; };
+		1F0362612C21D88E0085C32C /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624D2C21D88E0085C32C /* MaterialCommunityIcons.ttf */; };
+		1F0362622C21D88E0085C32C /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624E2C21D88E0085C32C /* MaterialIcons.ttf */; };
+		1F0362632C21D88E0085C32C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03624F2C21D88E0085C32C /* Octicons.ttf */; };
+		1F0362642C21D88E0085C32C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362502C21D88E0085C32C /* SimpleLineIcons.ttf */; };
+		1F0362652C21D88E0085C32C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0362512C21D88E0085C32C /* Zocial.ttf */; };
+		261B7CCA0EA14619A1439FB0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94D89D7CB2842F0B86F5212 /* Roboto-Bold.ttf */; };
+		30B1644DDCBB4BA7A333EAE2 /* danger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB9E1065924CA7A333D97C /* danger.svg */; };
+		3B38712863DC43DFB418DF60 /* visa.svg in Resources */ = {isa = PBXBuildFile; fileRef = D58162FB86F54CD3904B2957 /* visa.svg */; };
+		3B840A1F873040EEB2D6DBCB /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FE04C60CBE446FE8F1BDD15 /* Roboto-Regular.ttf */; };
+		3C97D472EA6340A0A1B76662 /* check-out.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F007613994315A3F499D8 /* check-out.svg */; };
+		54E12D20947D473CB796CF06 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70729F7A99DB49E99846FF57 /* BootSplash.storyboard */; };
+		66726D000AEB4A4987306433 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		7522F1BBA8235EDC84A1BA30 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = EBF3B6864E19E58B0A22F9E5 /* PrivacyInfo.xcprivacy */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		87C498C18B7A4DD48474B4D3 /* NotoSansOriya-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB24CB1B9D6F4D7D91C0C3C4 /* NotoSansOriya-VariableFont.ttf */; };
+		8FBCFEBD6A8E49AD94FC437A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AB204C742A4F17B708EA5D /* Colors.xcassets */; };
+		9CF5AA9298654C609070C713 /* root_hero.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7439424A75404E33A886445C /* root_hero.svg */; };
+		9DBA98F3179647ADAF24281E /* coldroom.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4C9DFE8E3FA54BB891B92744 /* coldroom.svg */; };
+		9F62F2FE1F8E45E18126CDD3 /* mine-cart.svg in Resources */ = {isa = PBXBuildFile; fileRef = B096564513214963853ACF67 /* mine-cart.svg */; };
+		A2154905037B423583740A9A /* farmer.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8CDC63FEC67E4BF7BC3C78C6 /* farmer.svg */; };
+		B2A90F6D13EF4888B918442F /* NotoSansDevanagari-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4903C78EE44A688ABC94DF /* NotoSansDevanagari-VariableFont.ttf */; };
+		BC469F0F72457932BD08E832 /* libPods-coldtivate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCC6FCFCCCFFEFA7DD1C32E /* libPods-coldtivate.a */; };
+		C617CC5021894201A62E3BD1 /* coldtivate_logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 29F863ED6E684DE2B45A5727 /* coldtivate_logo.svg */; };
+		CAD7F003ABEE4BD9AE9B227E /* NotoSansArabic-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79E30680635F4926BC132802 /* NotoSansArabic-VariableFont.ttf */; };
+		E7F8E9239B4818E293069B7D /* libPods-coldtivate-coldtivateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA02FA770250D5380F8B5854 /* libPods-coldtivate-coldtivateTests.a */; };
+		EA78CD88D2AA4976A2C1E8E0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DF6D3D9024F8BA2F0BA92 /* Roboto-Medium.ttf */; };
+		F24FF65DA0D14C408F532B0F /* mastercard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 899E9096890A407492F1E795 /* mastercard.svg */; };
+		F31AD301A5134403AB09996F /* operator.svg in Resources */ = {isa = PBXBuildFile; fileRef = F29467767798412793EEC61D /* operator.svg */; };
+		F379F59D95304B5187AD43D6 /* crates-management.svg in Resources */ = {isa = PBXBuildFile; fileRef = 86FA44144665488483A6D655 /* crates-management.svg */; };
+		F4B76086E5DD43CE89F606B8 /* NotoSansGujarati-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76117576D765498C98CE800C /* NotoSansGujarati-VariableFont.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = coldtivate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* coldtivateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coldtivateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* coldtivateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coldtivateTests.m; sourceTree = "<group>"; };
+		10D0780B2CB9FC7100F727BE /* libreact-native-config.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-config.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* coldtivate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coldtivate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = coldtivate/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = coldtivate/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = coldtivate/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = coldtivate/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = coldtivate/main.m; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = coldtivate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		19AB204C742A4F17B708EA5D /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = coldtivate/Colors.xcassets; sourceTree = "<group>"; };
+		1F03623F2C21D88E0085C32C /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		1F0362402C21D88E0085C32C /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		1F0362412C21D88E0085C32C /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		1F0362422C21D88E0085C32C /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		1F0362432C21D88E0085C32C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		1F0362442C21D88E0085C32C /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		1F0362452C21D88E0085C32C /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		1F0362462C21D88E0085C32C /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		1F0362472C21D88E0085C32C /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
+		1F0362482C21D88E0085C32C /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Regular.ttf; sourceTree = "<group>"; };
+		1F0362492C21D88E0085C32C /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Solid.ttf; sourceTree = "<group>"; };
+		1F03624A2C21D88E0085C32C /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		1F03624B2C21D88E0085C32C /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		1F03624C2C21D88E0085C32C /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		1F03624D2C21D88E0085C32C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		1F03624E2C21D88E0085C32C /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		1F03624F2C21D88E0085C32C /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		1F0362502C21D88E0085C32C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		1F0362512C21D88E0085C32C /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		1F5FBA022CB95AB60024DCD1 /* coldtivate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = coldtivate.entitlements; path = coldtivate/coldtivate.entitlements; sourceTree = "<group>"; };
+		29F863ED6E684DE2B45A5727 /* coldtivate_logo.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = coldtivate_logo.svg; path = ../src/assets/images/coldtivate_logo.svg; sourceTree = "<group>"; };
+		2F957ADF040903FECCA70BFC /* Pods-coldtivate-coldtivateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coldtivate-coldtivateTests.release.xcconfig"; path = "Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D1DF6D3D9024F8BA2F0BA92 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		4C9DFE8E3FA54BB891B92744 /* coldroom.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = coldroom.svg; path = ../src/assets/icons/coldroom.svg; sourceTree = "<group>"; };
+		4E4903C78EE44A688ABC94DF /* NotoSansDevanagari-VariableFont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansDevanagari-VariableFont.ttf"; path = "../src/assets/fonts/NotoSansDevanagari-VariableFont.ttf"; sourceTree = "<group>"; };
+		5B7F007613994315A3F499D8 /* check-out.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "check-out.svg"; path = "../src/assets/icons/check-out.svg"; sourceTree = "<group>"; };
+		70729F7A99DB49E99846FF57 /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = coldtivate/BootSplash.storyboard; sourceTree = "<group>"; };
+		7439424A75404E33A886445C /* root_hero.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = root_hero.svg; path = ../src/assets/images/root_hero.svg; sourceTree = "<group>"; };
+		76117576D765498C98CE800C /* NotoSansGujarati-VariableFont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansGujarati-VariableFont.ttf"; path = "../src/assets/fonts/NotoSansGujarati-VariableFont.ttf"; sourceTree = "<group>"; };
+		79E30680635F4926BC132802 /* NotoSansArabic-VariableFont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansArabic-VariableFont.ttf"; path = "../src/assets/fonts/NotoSansArabic-VariableFont.ttf"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = coldtivate/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86B547C90D3270EB085B6E50 /* Pods-coldtivate-coldtivateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coldtivate-coldtivateTests.debug.xcconfig"; path = "Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86FA44144665488483A6D655 /* crates-management.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "crates-management.svg"; path = "../src/assets/icons/crates-management.svg"; sourceTree = "<group>"; };
+		899E9096890A407492F1E795 /* mastercard.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = mastercard.svg; path = ../src/assets/images/mastercard.svg; sourceTree = "<group>"; };
+		8CDC63FEC67E4BF7BC3C78C6 /* farmer.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = farmer.svg; path = ../src/assets/icons/farmer.svg; sourceTree = "<group>"; };
+		8FE04C60CBE446FE8F1BDD15 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9FAB9E1065924CA7A333D97C /* danger.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = danger.svg; path = ../src/assets/icons/danger.svg; sourceTree = "<group>"; };
+		AA905993565E266A27682882 /* Pods-coldtivate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coldtivate.release.xcconfig"; path = "Target Support Files/Pods-coldtivate/Pods-coldtivate.release.xcconfig"; sourceTree = "<group>"; };
+		B096564513214963853ACF67 /* mine-cart.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "mine-cart.svg"; path = "../src/assets/icons/mine-cart.svg"; sourceTree = "<group>"; };
+		BA5E6F59DCC948798269F922 /* employee.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = employee.svg; path = ../src/assets/icons/employee.svg; sourceTree = "<group>"; };
+		BB24CB1B9D6F4D7D91C0C3C4 /* NotoSansOriya-VariableFont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansOriya-VariableFont.ttf"; path = "../src/assets/fonts/NotoSansOriya-VariableFont.ttf"; sourceTree = "<group>"; };
+		C5557BDE2E30475B88B30240 /* check-in.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "check-in.svg"; path = "../src/assets/icons/check-in.svg"; sourceTree = "<group>"; };
+		C94D89D7CB2842F0B86F5212 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D507F0291B5BC3696B9DBB18 /* Pods-coldtivate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coldtivate.debug.xcconfig"; path = "Target Support Files/Pods-coldtivate/Pods-coldtivate.debug.xcconfig"; sourceTree = "<group>"; };
+		D58162FB86F54CD3904B2957 /* visa.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visa.svg; path = ../src/assets/images/visa.svg; sourceTree = "<group>"; };
+		EBF3B6864E19E58B0A22F9E5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = coldtivate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		ECCC6FCFCCCFFEFA7DD1C32E /* libPods-coldtivate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coldtivate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F29467767798412793EEC61D /* operator.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = operator.svg; path = ../src/assets/icons/operator.svg; sourceTree = "<group>"; };
+		FA02FA770250D5380F8B5854 /* libPods-coldtivate-coldtivateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coldtivate-coldtivateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F8E9239B4818E293069B7D /* libPods-coldtivate-coldtivateTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10D0780C2CB9FC7100F727BE /* libreact-native-config.a in Frameworks */,
+				BC469F0F72457932BD08E832 /* libPods-coldtivate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* coldtivateTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* coldtivateTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = coldtivateTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* coldtivate */ = {
+			isa = PBXGroup;
+			children = (
+				1F5FBA022CB95AB60024DCD1 /* coldtivate.entitlements */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				EBF3B6864E19E58B0A22F9E5 /* PrivacyInfo.xcprivacy */,
+				70729F7A99DB49E99846FF57 /* BootSplash.storyboard */,
+				19AB204C742A4F17B708EA5D /* Colors.xcassets */,
+			);
+			name = coldtivate;
+			sourceTree = "<group>";
+		};
+		1F0362522C21D88E0085C32C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1F03623F2C21D88E0085C32C /* AntDesign.ttf */,
+				1F0362402C21D88E0085C32C /* Entypo.ttf */,
+				1F0362412C21D88E0085C32C /* EvilIcons.ttf */,
+				1F0362422C21D88E0085C32C /* Feather.ttf */,
+				1F0362432C21D88E0085C32C /* FontAwesome.ttf */,
+				1F0362442C21D88E0085C32C /* FontAwesome5_Brands.ttf */,
+				1F0362452C21D88E0085C32C /* FontAwesome5_Regular.ttf */,
+				1F0362462C21D88E0085C32C /* FontAwesome5_Solid.ttf */,
+				1F0362472C21D88E0085C32C /* FontAwesome6_Brands.ttf */,
+				1F0362482C21D88E0085C32C /* FontAwesome6_Regular.ttf */,
+				1F0362492C21D88E0085C32C /* FontAwesome6_Solid.ttf */,
+				1F03624A2C21D88E0085C32C /* Fontisto.ttf */,
+				1F03624B2C21D88E0085C32C /* Foundation.ttf */,
+				1F03624C2C21D88E0085C32C /* Ionicons.ttf */,
+				1F03624D2C21D88E0085C32C /* MaterialCommunityIcons.ttf */,
+				1F03624E2C21D88E0085C32C /* MaterialIcons.ttf */,
+				1F03624F2C21D88E0085C32C /* Octicons.ttf */,
+				1F0362502C21D88E0085C32C /* SimpleLineIcons.ttf */,
+				1F0362512C21D88E0085C32C /* Zocial.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10D0780B2CB9FC7100F727BE /* libreact-native-config.a */,
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				ECCC6FCFCCCFFEFA7DD1C32E /* libPods-coldtivate.a */,
+				FA02FA770250D5380F8B5854 /* libPods-coldtivate-coldtivateTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				1F0362522C21D88E0085C32C /* Fonts */,
+				13B07FAE1A68108700A75B9A /* coldtivate */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* coldtivateTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A08D48B2472B4A5BB63285F4 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* coldtivate.app */,
+				00E356EE1AD99517003FC87E /* coldtivateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A08D48B2472B4A5BB63285F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7439424A75404E33A886445C /* root_hero.svg */,
+				29F863ED6E684DE2B45A5727 /* coldtivate_logo.svg */,
+				BA5E6F59DCC948798269F922 /* employee.svg */,
+				8CDC63FEC67E4BF7BC3C78C6 /* farmer.svg */,
+				F29467767798412793EEC61D /* operator.svg */,
+				9FAB9E1065924CA7A333D97C /* danger.svg */,
+				C94D89D7CB2842F0B86F5212 /* Roboto-Bold.ttf */,
+				3D1DF6D3D9024F8BA2F0BA92 /* Roboto-Medium.ttf */,
+				8FE04C60CBE446FE8F1BDD15 /* Roboto-Regular.ttf */,
+				4C9DFE8E3FA54BB891B92744 /* coldroom.svg */,
+				B096564513214963853ACF67 /* mine-cart.svg */,
+				86FA44144665488483A6D655 /* crates-management.svg */,
+				4E4903C78EE44A688ABC94DF /* NotoSansDevanagari-VariableFont.ttf */,
+				76117576D765498C98CE800C /* NotoSansGujarati-VariableFont.ttf */,
+				BB24CB1B9D6F4D7D91C0C3C4 /* NotoSansOriya-VariableFont.ttf */,
+				899E9096890A407492F1E795 /* mastercard.svg */,
+				D58162FB86F54CD3904B2957 /* visa.svg */,
+				C5557BDE2E30475B88B30240 /* check-in.svg */,
+				5B7F007613994315A3F499D8 /* check-out.svg */,
+				79E30680635F4926BC132802 /* NotoSansArabic-VariableFont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D507F0291B5BC3696B9DBB18 /* Pods-coldtivate.debug.xcconfig */,
+				AA905993565E266A27682882 /* Pods-coldtivate.release.xcconfig */,
+				86B547C90D3270EB085B6E50 /* Pods-coldtivate-coldtivateTests.debug.xcconfig */,
+				2F957ADF040903FECCA70BFC /* Pods-coldtivate-coldtivateTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* coldtivateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "coldtivateTests" */;
+			buildPhases = (
+				648BD63F96776162BE41552E /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				2B09FD17BAD5F3DA5AC95404 /* [CP] Embed Pods Frameworks */,
+				11F83B9A7C34C602A0442433 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = coldtivateTests;
+			productName = coldtivateTests;
+			productReference = 00E356EE1AD99517003FC87E /* coldtivateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* coldtivate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "coldtivate" */;
+			buildPhases = (
+				231F66C5D89484AA1AA3C787 /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				B2C718BD06914F599005E457 /* Upload Debug Symbols to Sentry */,
+				EF12752BB59457BEE339093B /* [CP] Embed Pods Frameworks */,
+				B511795E37956ACF03622DD9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = coldtivate;
+			productName = coldtivate;
+			productReference = 13B07F961A680F5B00A75B9A /* coldtivate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JS75VC2AMT;
+						ProvisioningStyle = Manual;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = JS75VC2AMT;
+						LastSwiftMigration = 1120;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "coldtivate" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* coldtivate */,
+				00E356ED1AD99517003FC87E /* coldtivateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0362632C21D88E0085C32C /* Octicons.ttf in Resources */,
+				1F0362532C21D88E0085C32C /* AntDesign.ttf in Resources */,
+				1F0362602C21D88E0085C32C /* Ionicons.ttf in Resources */,
+				1F0362572C21D88E0085C32C /* FontAwesome.ttf in Resources */,
+				1F0362542C21D88E0085C32C /* Entypo.ttf in Resources */,
+				1F03625F2C21D88E0085C32C /* Foundation.ttf in Resources */,
+				1F03625A2C21D88E0085C32C /* FontAwesome5_Solid.ttf in Resources */,
+				1F0362612C21D88E0085C32C /* MaterialCommunityIcons.ttf in Resources */,
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1F0362582C21D88E0085C32C /* FontAwesome5_Brands.ttf in Resources */,
+				1F0362592C21D88E0085C32C /* FontAwesome5_Regular.ttf in Resources */,
+				1F03625E2C21D88E0085C32C /* Fontisto.ttf in Resources */,
+				7522F1BBA8235EDC84A1BA30 /* PrivacyInfo.xcprivacy in Resources */,
+				1F0362552C21D88E0085C32C /* EvilIcons.ttf in Resources */,
+				1F03625D2C21D88E0085C32C /* FontAwesome6_Solid.ttf in Resources */,
+				1F0362652C21D88E0085C32C /* Zocial.ttf in Resources */,
+				1F03625B2C21D88E0085C32C /* FontAwesome6_Brands.ttf in Resources */,
+				1F03625C2C21D88E0085C32C /* FontAwesome6_Regular.ttf in Resources */,
+				9CF5AA9298654C609070C713 /* root_hero.svg in Resources */,
+				C617CC5021894201A62E3BD1 /* coldtivate_logo.svg in Resources */,
+				1F0362642C21D88E0085C32C /* SimpleLineIcons.ttf in Resources */,
+				1F0362562C21D88E0085C32C /* Feather.ttf in Resources */,
+				1F0362622C21D88E0085C32C /* MaterialIcons.ttf in Resources */,
+				14908BD75E8F44A696C7D890 /* employee.svg in Resources */,
+				A2154905037B423583740A9A /* farmer.svg in Resources */,
+				F31AD301A5134403AB09996F /* operator.svg in Resources */,
+				30B1644DDCBB4BA7A333EAE2 /* danger.svg in Resources */,
+				261B7CCA0EA14619A1439FB0 /* Roboto-Bold.ttf in Resources */,
+				EA78CD88D2AA4976A2C1E8E0 /* Roboto-Medium.ttf in Resources */,
+				3B840A1F873040EEB2D6DBCB /* Roboto-Regular.ttf in Resources */,
+				9DBA98F3179647ADAF24281E /* coldroom.svg in Resources */,
+				9F62F2FE1F8E45E18126CDD3 /* mine-cart.svg in Resources */,
+				F379F59D95304B5187AD43D6 /* crates-management.svg in Resources */,
+				66726D000AEB4A4987306433 /* BuildFile in Resources */,
+				54E12D20947D473CB796CF06 /* BootSplash.storyboard in Resources */,
+				8FBCFEBD6A8E49AD94FC437A /* Colors.xcassets in Resources */,
+				66726D000AEB4A4987306433 /* BuildFile in Resources */,
+				B2A90F6D13EF4888B918442F /* NotoSansDevanagari-VariableFont.ttf in Resources */,
+				F4B76086E5DD43CE89F606B8 /* NotoSansGujarati-VariableFont.ttf in Resources */,
+				87C498C18B7A4DD48474B4D3 /* NotoSansOriya-VariableFont.ttf in Resources */,
+				F24FF65DA0D14C408F532B0F /* mastercard.svg in Resources */,
+				3B38712863DC43DFB418DF60 /* visa.svg in Resources */,
+				1BB18B72E858487C9852222C /* check-in.svg in Resources */,
+				3C97D472EA6340A0A1B76662 /* check-out.svg in Resources */,
+				CAD7F003ABEE4BD9AE9B227E /* NotoSansArabic-VariableFont.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT \\\"/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode.sh $REACT_NATIVE_XCODE\\\"\"\n";
+		};
+		11F83B9A7C34C602A0442433 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		231F66C5D89484AA1AA3C787 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coldtivate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B09FD17BAD5F3DA5AC95404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coldtivate-coldtivateTests/Pods-coldtivate-coldtivateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		648BD63F96776162BE41552E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coldtivate-coldtivateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C718BD06914F599005E457 /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Debug Symbols to Sentry";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode-debug-files.sh";
+		};
+		B511795E37956ACF03622DD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF12752BB59457BEE339093B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coldtivate/Pods-coldtivate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* coldtivateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* coldtivate */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B547C90D3270EB085B6E50 /* Pods-coldtivate-coldtivateTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JS75VC2AMT;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = coldtivateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b80883a4-0eb5-49c1-9574-6d391cf7a24e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.base.coldtivate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coldtivate.app/coldtivate";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F957ADF040903FECCA70BFC /* Pods-coldtivate-coldtivateTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = JS75VC2AMT;
+				INFOPLIST_FILE = coldtivateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b80883a4-0eb5-49c1-9574-6d391cf7a24e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.base.coldtivate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coldtivate.app/coldtivate";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D507F0291B5BC3696B9DBB18 /* Pods-coldtivate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = coldtivate/coldtivate.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JS75VC2AMT;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxMaps/MapboxMaps.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Turf/Turf.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/BVLinearGradient\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKV\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKVCore\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTDeprecation\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNCClipboard\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFastImage\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFlashList\"",
+					"\"${PODS_ROOT}/Headers/Public/RNGestureHandler\"",
+					"\"${PODS_ROOT}/Headers/Public/RNLocalize\"",
+					"\"${PODS_ROOT}/Headers/Public/RNReanimated\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/RNScreens\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSentry\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflags\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-nativeconfig\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactNativeGetLocation\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImageWebPCoder\"",
+					"\"${PODS_ROOT}/Headers/Public/Sentry\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libwebp\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-config\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-date-picker\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-geolocation\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-html-to-pdf\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-image-picker\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-mmkv\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-netinfo\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-pager-view\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-skia\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-webview\"",
+					"\"${PODS_ROOT}/Headers/Public/rnmapbox-maps\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-skia/Headers\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/boost-for-react-native\"",
+					"\"$(PODS_ROOT)/glog\"",
+					"\"$(PODS_ROOT)/RCT-Folly\"",
+					"\"$(PODS_ROOT)/Headers/Public/React-hermes\"",
+					"\"$(PODS_ROOT)/Headers/Public/hermes-engine\"",
+					"\"$(PODS_ROOT)/../../node_modules/react-native/ReactCommon\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(SRCROOT)/../node_modules/react-native-config/ios/**\"",
+				);
+				INFOPLIST_FILE = coldtivate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.coldtivate;
+				PRODUCT_NAME = coldtivate;
+				PROVISIONING_PROFILE = "b80883a4-0eb5-49c1-9574-6d391cf7a24e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.base.coldtivate";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA905993565E266A27682882 /* Pods-coldtivate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = coldtivate/coldtivate.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JS75VC2AMT;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxMaps/MapboxMaps.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Turf/Turf.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/BVLinearGradient\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKV\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKVCore\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTDeprecation\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNCClipboard\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFastImage\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFlashList\"",
+					"\"${PODS_ROOT}/Headers/Public/RNGestureHandler\"",
+					"\"${PODS_ROOT}/Headers/Public/RNLocalize\"",
+					"\"${PODS_ROOT}/Headers/Public/RNReanimated\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/RNScreens\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSentry\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflags\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-nativeconfig\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactNativeGetLocation\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImageWebPCoder\"",
+					"\"${PODS_ROOT}/Headers/Public/Sentry\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libwebp\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-config\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-date-picker\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-geolocation\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-html-to-pdf\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-image-picker\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-mmkv\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-netinfo\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-pager-view\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-skia\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-webview\"",
+					"\"${PODS_ROOT}/Headers/Public/rnmapbox-maps\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-skia/Headers\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/boost-for-react-native\"",
+					"\"$(PODS_ROOT)/glog\"",
+					"\"$(PODS_ROOT)/RCT-Folly\"",
+					"\"$(PODS_ROOT)/Headers/Public/React-hermes\"",
+					"\"$(PODS_ROOT)/Headers/Public/hermes-engine\"",
+					"\"$(PODS_ROOT)/../../node_modules/react-native/ReactCommon\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(SRCROOT)/../node_modules/react-native-config/ios/**\"",
+				);
+				INFOPLIST_FILE = coldtivate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.coldtivate;
+				PRODUCT_NAME = coldtivate;
+				PROVISIONING_PROFILE = "b80883a4-0eb5-49c1-9574-6d391cf7a24e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.base.coldtivate";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CXX = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CXX = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				USE_HERMES = true;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "coldtivateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "coldtivate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "coldtivate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
