@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUpCoolingUser Component Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .mobile-frame {
+            width: 375px;
+            height: 812px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border: 8px solid #000;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 28px;
+            background: #000;
+            border-radius: 0 0 30px 30px;
+            z-index: 10;
+        }
+
+        .screen {
+            flex: 1;
+            background: white;
+            border-radius: 36px;
+            overflow-y: auto;
+            padding: 20px;
+            margin-top: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: #ddd white;
+        }
+
+        .screen::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .screen::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        .screen::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 3px;
+        }
+
+        .welcome-text {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .section-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+            padding: 0 4px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .input-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 6px;
+            display: block;
+            padding: 0 4px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            background: white;
+            color: #333;
+            transition: border-color 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-field.error {
+            border-color: #dc2626;
+            background: #fef2f2;
+        }
+
+        .select-field {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            background: white;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .select-field:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .terms-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 12px 0;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #16a34a;
+            border-radius: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkbox:hover {
+            background: #f0f9ff;
+        }
+
+        .checkbox.checked {
+            background: #16a34a;
+            color: white;
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .terms-text {
+            flex: 1;
+        }
+
+        .terms-link {
+            color: #667eea;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .terms-link:hover {
+            color: #764ba2;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            font-size: 11px;
+            color: #dc2626;
+            margin-top: 4px;
+            display: none;
+            padding: 0 4px;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+            user-select: none;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="notch"></div>
+        <div class="screen">
+            <div class="welcome-text">Welcome to Coldtivate</div>
+
+            <div class="section-header">Sign Up as Cooling User</div>
+
+            <!-- Country Field -->
+            <div class="form-group">
+                <label class="input-label">Country *</label>
+                <select class="select-field" id="country">
+                    <option value="">Select a country</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="India">India</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Ghana">Ghana</option>
+                </select>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+                <label class="input-label">Phone Number *</label>
+                <div class="input-wrapper">
+                    <input type="tel" class="input-field" id="phone" placeholder="+1 (555) 123-4567">
+                </div>
+            </div>
+
+            <!-- First Name Field -->
+            <div class="form-group">
+                <label class="input-label">First Name *</label>
+                <input type="text" class="input-field" placeholder="John" id="firstName">
+            </div>
+
+            <!-- Last Name Field -->
+            <div class="form-group">
+                <label class="input-label">Last Name *</label>
+                <input type="text" class="input-field" placeholder="Doe" id="lastName">
+            </div>
+
+            <!-- Language Field -->
+            <div class="form-group">
+                <label class="input-label">Language *</label>
+                <select class="select-field" id="language">
+                    <option value="">Select a language</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="form-group">
+                <label class="input-label">Gender *</label>
+                <select class="select-field" id="gender">
+                    <option value="">Select a gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not">Prefer not to say</option>
+                </select>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label class="input-label">Password *</label>
+                <div class="input-wrapper">
+                    <input type="password" class="input-field" id="password" placeholder="Enter password">
+                    <span class="eye-icon" id="password-eye" onclick="togglePassword('password')">👁️</span>
+                </div>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+                <label class="input-label">Confirm Password *</label>
+                <div class="input-wrapper">
+                    <input type="password" class="input-field" id="confirmPassword" placeholder="Confirm password">
+                    <span class="eye-icon" id="confirmPassword-eye" onclick="togglePassword('confirmPassword')">👁️</span>
+                </div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="terms-section">
+                <div class="checkbox" id="terms-checkbox" onclick="toggleCheckbox()"></div>
+                <div class="terms-text">
+                    I agree to the 
+                    <span class="terms-link" onclick="alert('License Agreement clicked')">License Agreement</span>,
+                    <span class="terms-link" onclick="alert('Privacy Policy clicked')">Privacy Policy</span>
+                    and
+                    <span class="terms-link" onclick="alert('Comsol Terms clicked')">Comsol Terms</span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="button" id="submitBtn" onclick="handleSubmit()">Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        let termsChecked = false;
+
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            const eyeIcon = document.getElementById(fieldId + '-eye');
+            if (field.type === 'password') {
+                field.type = 'text';
+                eyeIcon.textContent = '👁️‍🗨️';
+            } else {
+                field.type = 'password';
+                eyeIcon.textContent = '👁️';
+            }
+        }
+
+        function toggleCheckbox() {
+            const checkbox = document.getElementById('terms-checkbox');
+            termsChecked = !termsChecked;
+            if (termsChecked) {
+                checkbox.classList.add('checked');
+            } else {
+                checkbox.classList.remove('checked');
+            }
+            updateSubmitButton();
+        }
+
+        function updateSubmitButton() {
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = !termsChecked;
+        }
+
+        function handleSubmit() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const country = document.getElementById('country').value;
+            const language = document.getElementById('language').value;
+            const gender = document.getElementById('gender').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            let errors = [];
+
+            if (!firstName) errors.push('First name is required');
+            if (!lastName) errors.push('Last name is required');
+            if (!phone) errors.push('Phone number is required');
+            if (!country) errors.push('Country is required');
+            if (!language) errors.push('Language is required');
+            if (!gender) errors.push('Gender is required');
+            if (!password) errors.push('Password is required');
+            if (!confirmPassword) errors.push('Confirm password is required');
+            if (password !== confirmPassword) errors.push('Passwords do not match');
+            if (!termsChecked) errors.push('You must agree to the terms');
+
+            if (errors.length > 0) {
+                alert('Please fix the following errors:\n' + errors.join('\n'));
+            } else {
+                alert('Sign up successful!\n\nForm Data:\n' + 
+                    'First Name: ' + firstName + '\n' +
+                    'Last Name: ' + lastName + '\n' +
+                    'Phone: ' + phone + '\n' +
+                    'Country: ' + country + '\n' +
+                    'Language: ' + language + '\n' +
+                    'Gender: ' + gender);
+            }
+        }
+
+        // Initialize
+        updateSubmitButton();
+    </script>
+</body>
+</html>
